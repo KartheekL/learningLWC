@@ -1,5 +1,15 @@
 <template>
 	<lightning-card title="My Test Card">
 		<div>This is the data from child element!</div>
+		<br />
+		<template for:each={dataArray} for:item="data">
+			<div key={data.key}>{data.value}</div>
+		</template>
+		<br />
+		<lightning-button
+			title="Button"
+			label="Render"
+			onclick={dataUpdate}
+		></lightning-button>
 	</lightning-card>
 </template>
